@@ -1,0 +1,140 @@
+<html lang="en">
+<head>
+ 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PTMOBILE</title>
+    <link rel="stylesheet" href="stylesheets/style.css" type="text/css">
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- web font -->
+	<link href="//fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet">
+	<!-- //web font -->
+</head>
+<body>
+    <div class="bg-layer">
+        <div class="topnav" id="navbar">
+            <a class="active" href="/admin">ADMIN PAGE</a>
+            <a href="/admin?themdt=1">THÊM ĐIỆN THOẠI</a>
+            <a href="/admin?xulydonhang=1">XỬ LÝ ĐƠN HÀNG</a>
+            <a href="/index" style="float: right; background: white; color: black">TRỞ VỀ TRANG CHỦ</a>
+        </div>
+
+        <div class="body-container">
+            <div class="header">
+                <div class="logo">
+                    <img src="images/logo/logo.png" />
+                </div>
+            </div>
+            <div stype="width: 100%">
+                    <img src="images/ads/ads1.jpg" style="width:100%">
+                </div>
+
+            <div class="border-of-container">
+            
+                <div class="main-container">
+                    <div class="main-content">
+                        <div class="text-navigation">
+                            <span>Thêm điện thoại mới</span>
+                        </div>
+                        <form action="admin/ThemDT" enctype="multipart/form-data" method="POST">
+                            <table class="dathang-table"  width="70%" border="0" align="center" cellpadding="1" cellspacing="1">
+                           
+                            <tr>
+                                <td><p class="style10">&nbsp;Mã điện thoại: </p></td>
+                                <td><label>
+                                <input name="madt" cols="35" id="madt"></input>
+                                </label></td>
+                            </tr>
+                            <tr>
+                                <td width="26%"><p class="style10">&nbsp;Tên điện thoại: </p></td>
+                                <td width="74%"><label>
+                                <input name="ten_dt" type="text" id="ten_dt" size="35">
+                                </label></td>
+                            </tr>
+                            <tr>
+                                <td><p class="style10">&nbsp;Loại điện thoại:</p></td>
+                                
+                                <td><label>
+                                <select name="loai" id="loai">
+                                <%- dsldt %>
+                                </select>
+                                </label></td>
+                            </tr>
+                            <tr>
+                                <td><p class="style10">&nbsp;Đơn giá </p></td>
+                                <td><label>
+                                <input name="gia_ban" type="text" id="gia_ban">
+                                </label></td>
+                            </tr>
+                            <tr>
+                                <td><p class="style10">&nbsp;Hình điện thoại </p></td>
+                                <td><label>
+                                <input name="file" type="file" size="45">
+                                </label></td>
+                            </tr>
+                            <tr>
+                                <td width="26%"><p class="style10">&nbsp;Mô tả: </p></td>
+                                <td width="74%"><label>
+                                <input name="mota" type="text" id="mota" size="45">
+                                </label></td>
+                            </tr>
+                            <tr>
+                                <td height="35" colspan="2"><p align="center">
+                                <label>
+                                    <br>
+                                <input type="submit" class="btn-order" style="width: 300px;" name="Submit" value="Thêm điện thoại mới">
+                                </label>
+                                </p></td>
+                            </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about">
+            <div class="body-container">
+                <div class="about-content">
+                    <div class="left-part">
+                        <p>PTMOBILE - The world of smartphones</p>
+                        <p>Liên hệ: 0374988XXX</p>
+                        <p>Địa chỉ: Phường Linh Trung, Quận Thủ Đức, TP.HCM</p>
+                        <p>Các phương thức thanh toán khả dụng:</p>
+                        <p>
+                            <img src="images/payment-method/visa.svg" width="37" height="23" />
+                            <img src="images/payment-method/mastercard.svg" width="37" height="23" />
+                            <img src="images/payment-method/jcb.svg" width="37" height="23" />
+                            <img src="images/payment-method/internet-banking.svg" width="37" height="23" />
+                            <img src="images/payment-method/cash.svg" width="37" height="23" />
+                        </p>
+                    </div>
+                    <div class="right-part">
+                        <img src="images/logo/logo-footer.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <button onclick="topFunction()" id="myBtn" title="Go to top"> ▲ </button> -->
+    </div>
+    <script src="javascripts/scripts.js"></script>
+
+    <script>
+            var check = 0;
+            function openForm() {
+                if (check == 0) {
+                    check = 1;
+                    document.getElementById("js-cart-form").style.display = "block";
+                }
+                else {
+                    document.getElementById("js-cart-form").style.display = "none";
+                    check = 0;
+                }
+            }
+        </script>
+</body>
+</html>

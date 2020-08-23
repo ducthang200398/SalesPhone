@@ -1,0 +1,107 @@
+<html lang="en">
+<head>
+ 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PTMOBILE</title>
+    <link rel="stylesheet" href="stylesheets/style.css" type="text/css">
+    <script language="javascript" type="text/javascript">
+        function doitt(sodh)
+        { 
+            var kq=confirm('Bạn có muốn xóa không?');
+            if(kq==true)
+            {
+            var dd='/admin?xulydonhang=1&sodhdoi='+sodh; 
+        window.open(dd);
+            }
+        }
+      </script>
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- web font -->
+	<link href="//fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet">
+	<!-- //web font -->
+</head>
+<body>
+    <div class="bg-layer">
+        <div class="topnav" id="navbar">
+            <a class="active" href="/admin">ADMIN PAGE</a>
+            <a href="/admin?themdt=1">THÊM ĐIỆN THOẠI</a>
+            <a href="/admin?xulydonhang=1">XỬ LÝ ĐƠN HÀNG</a>
+            <a href="/index" style="float: right; background: white; color: black">TRỞ VỀ TRANG CHỦ</a>
+        </div>
+
+        <div class="body-container">
+            <div class="header">
+                <div class="logo">
+                    <img src="images/logo/logo.png" />
+                </div>
+            </div>
+            <div stype="width: 100%">
+                    <img src="images/ads/ads1.jpg" style="width:100%">
+                </div>
+
+            <div class="border-of-container">
+                <div class="filter-pane">
+                    <div>
+                        <span>Xem điện thoại: </span>
+                        <ul class="category-list">
+                            <%-dsldt%>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="main-container">
+                    <div class="main-content">
+                        <div class="phone-list">
+                            <%-dsdt%>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about">
+            <div class="body-container">
+                <div class="about-content">
+                    <div class="left-part">
+                        <p>PTMOBILE - The world of smartphones</p>
+                        <p>Liên hệ: 0374988XXX</p>
+                        <p>Địa chỉ: Phường Linh Trung, Quận Thủ Đức, TP.HCM</p>
+                        <p>Các phương thức thanh toán khả dụng:</p>
+                        <p>
+                            <img src="images/payment-method/visa.svg" width="37" height="23" />
+                            <img src="images/payment-method/mastercard.svg" width="37" height="23" />
+                            <img src="images/payment-method/jcb.svg" width="37" height="23" />
+                            <img src="images/payment-method/internet-banking.svg" width="37" height="23" />
+                            <img src="images/payment-method/cash.svg" width="37" height="23" />
+                        </p>
+                    </div>
+                    <div class="right-part">
+                        <img src="images/logo/logo-footer.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <button onclick="topFunction()" id="myBtn" title="Go to top"> ▲ </button> -->
+    </div>
+    <script src="javascripts/scripts.js"></script>
+
+    <script>
+            var check = 0;
+            function openForm() {
+                if (check == 0) {
+                    check = 1;
+                    document.getElementById("js-cart-form").style.display = "block";
+                }
+                else {
+                    document.getElementById("js-cart-form").style.display = "none";
+                    check = 0;
+                }
+            }
+        </script>
+</body>
+</html>
